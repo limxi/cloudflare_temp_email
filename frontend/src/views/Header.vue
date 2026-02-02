@@ -51,7 +51,7 @@ const changeLocale = async (lang) => {
 const { locale, t } = useI18n({
     messages: {
         en: {
-            title: 'Cloudflare Temp Email',
+            title: 'Temp Email',
             dark: 'Dark',
             light: 'Light',
             accessHeader: 'Access Password',
@@ -62,7 +62,7 @@ const { locale, t } = useI18n({
             ok: 'OK',
         },
         zh: {
-            title: 'Cloudflare 临时邮件',
+            title: '临时邮件',
             dark: '暗色',
             light: '亮色',
             accessHeader: '访问密码',
@@ -178,26 +178,26 @@ const menuOptions = computed(() => [
             }
         ),
         key: "lang"
-    },
-    {
-        label: () => h(
-            NButton,
-            {
-                text: true,
-                size: "small",
-                style: "width: 100%",
-                tag: "a",
-                target: "_blank",
-                href: "https://github.com/dreamhunter2333/cloudflare_temp_email",
-            },
-            {
-                default: () => version || "Github",
-                icon: () => h(NIcon, { component: GithubAlt })
-            }
-        ),
-        show: openSettings.value?.showGithub,
-        key: "github"
     }
+    // ,{
+    //     label: () => h(
+    //         NButton,
+    //         {
+    //             text: true,
+    //             size: "small",
+    //             style: "width: 100%",
+    //             tag: "a",
+    //             target: "_blank",
+    //             href: "https://github.com/dreamhunter2333/cloudflare_temp_email",
+    //         },
+    //         {
+    //             default: () => version || "Github",
+    //             icon: () => h(NIcon, { component: GithubAlt })
+    //         }
+    //     ),
+    //     show: openSettings.value?.showGithub,
+    //     key: "github"
+    // }
 ]);
 
 useHead({
